@@ -149,13 +149,13 @@ if ( fuel >= 80) {
     console.log ("თქვენ გაქვთ საკმარისი საწვავი ბათუმში ჩასასვლელად");
     if (fuelInBatumi >= 80) {
         console.log("თქვენ გაქვთ საკმარისი საწვავი ბათუმიდან თბილისში დასაბრუნებლად")
-    } else if (fuelInBatumi >= 50 && fuelInBatumi < 80) {
+    } else if (fuelInBatumi >= 70 && fuelInBatumi < 80) {
         console.log("თქვენ გაქვთ საკმარისი საწვავი ბათუმიდან იგოეთში ჩასასვლელად")
-    } else if (fuelInBatumi >= 30 && fuelInBatumi < 50) {
+    } else if (fuelInBatumi >= 60 && fuelInBatumi < 70) {
         console.log("თქვენ გაქვთ საკმარისი საწვავი ბათუმიდან გორში ჩასასვლელად")
-    } else if (fuelInBatumi >= 20 && fuelInBatumi < 30) {
+    } else if (fuelInBatumi >= 50 && fuelInBatumi < 60) {
         console.log("თქვენ გაქვთ საკმარისი საწვავი ბათუმიდან ხაშურამდე ჩასასვლელად")
-    } else if (fuelInBatumi >= 10 && fuelInBatumi < 20) {
+    } else if (fuelInBatumi >= 30 && fuelInBatumi < 50) {
         console.log("თქვენ გაქვთ საკმარისი საწვავი ბათუმიდან ქუთაისამდე ჩასასვლელად")
     } else {
         console.log("თქვენ არ გაქვთ უკან დასაბრუნებლად საკმარისი საწვავი")
