@@ -96,24 +96,26 @@ Let userIsStudent (boolean) - არის თუ არა მომხმა�
 “თქვენ არ გაქვთ საკმარისი თანხა”
  */
 
-let userBalance2 = 1000;
-let cartTotal2 = 800;
+let userBalance2 = 800;
+let cartTotal2 = 1000;
 
 let adminSale = cartTotal2 * 0.2; // 20% ფასდაკლება
 let frequentClientSale = cartTotal2 * 0.25 // 25% ფასდაკლება
 let studentSale = cartTotal2 * 0.5 // 50% ფასდაკლება
 
 let userIsAdmin = false;
-let userIsFrequentClient = true;
+let userIsFrequentClient = false;
 let userIsStudent = false;
 
-if (userBalance2 >= cartTotal2 && userIsAdmin) {
+if (userBalance2 >= cartTotal2 - adminSale && userIsAdmin) {
     console.log(`გადახდა წარმატებით შესრულდა - გადახდილი თანხა ${cartTotal2 - adminSale} - ფასდაკლება ${adminSale}`);
-} else if (userBalance2 >= cartTotal2 && userIsFrequentClient) {
+} else if (userBalance2 >= cartTotal2 - frequentClientSale && userIsFrequentClient) {
     console.log(`გადახდა წარმატებით შესრულდა - გადახდილი თანხა ${cartTotal2 - frequentClientSale} - ფასდაკლება ${frequentClientSale}`);
-} else if (userBalance2 >= cartTotal2 && userIsStudent) {
+} else if (userBalance2 >= cartTotal2 - studentSale  && userIsStudent) {
     console.log(`გადახდა წარმატებით შესრულდა - გადახდილი თანხა ${cartTotal2 - studentSale} - ფასდაკლება ${studentSale}`);
-} else {
+} else if (userBalance2 >= cartTotal2 ){
+    console.log(`გადახდა წარმატებით შესრულდა`);
+}else {
     console.log(`თქვენ არ გაქვთ საკმარისი თანხა`);
 }
 
